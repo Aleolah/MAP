@@ -3,6 +3,8 @@ public class Grade {
     public Grade(int value) {
         this.value = value;
     }
-
+    public void printGrade(){
+        System.out.println(value);
+    }
 
 }

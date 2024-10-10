@@ -10,13 +10,14 @@ public class Aufgabe1 {
         }
         return insufGrades;
     }
-    public int average (Grades grades){
-        int average = 0;
+    public double average (Grades grades){
+        double average = 0;
         for(Grade grade : grades.grades){
             average += grade.value;
         }
         average /= grades.grades.size();
-        return average;
+
+        return Double.parseDouble(String.format("%.2f", average));
     }
     public Grades roundedGrades(Grades grades){
         Grades roundedGrades = new Grades();
@@ -31,6 +32,17 @@ public class Aufgabe1 {
             roundedGrades.add(grade);
         }
         return roundedGrades;
+    }
+    public Grade maxRoundedGrade(Grades grades){
+        Grade maxGrade = new Grade(0);
+        Grades roundedGrades = new Grades();
+        roundedGrades = roundedGrades(grades);
+        for (Grade grade : roundedGrades.grades) {
+            if (grade.value > maxGrade.value)
+                maxGrade = grade;
+
+        }
+        return maxGrade;
     }
 
 }

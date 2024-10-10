@@ -16,9 +16,9 @@ public class Main {
         // 2
         Grades grades2 = new Grades();
         grades2.addGrades( new Grade(20));
-        grades2.addGrades( new Grade(30));
+        grades2.addGrades( new Grade(37));
         grades2.addGrades( new Grade(40));
-        int average = aufgabe1.average(grades2);
+        double average = aufgabe1.average(grades2);
         //System.out.println(average);
         //3
         Grades grades3 = new Grades();
@@ -32,6 +32,15 @@ public class Main {
          roundedGrades = aufgabe1.roundedGrades(grades3);
          //roundedGrades.printGrades();
          //4
+        Grades grades4 = new Grades();
+        grades4.addGrades( new Grade(20));
+        grades4.addGrades( new Grade(31));
+        grades4.addGrades( new Grade(77));
+        grades4.addGrades( new Grade(88));
+        grades4.addGrades( new Grade(99));
+        Grade maxgrade = new Grade(0);
+        maxgrade = aufgabe1.maxRoundedGrade(grades4);
+        //maxgrade.printGrade();
 
 
 
